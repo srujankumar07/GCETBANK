@@ -13,12 +13,13 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(
 	cors({
-		origin: [
-			"http://localhost:3000", "https://bloodbankfront.vercel.app"
-		],
-		credentials: true,
+	  origin: [
+		"http://localhost:3000",
+		"https://bloodbankfront.vercel.app"
+	  ],
+	  credentials: true,
 	})
-);
+  );
 
 
 mongoose.connect(process.env.CONNECT || '', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (e) => {
